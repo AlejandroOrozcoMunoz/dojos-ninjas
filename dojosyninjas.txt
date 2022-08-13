@@ -1,0 +1,41 @@
+1. 
+    Dojo.objects.create(name="CodingDojo", city="Silicon Valley", state="CA")
+    Dojo.objects.create(name="CodingDojo", city="Seattle", state="WA")
+    Dojo.objects.create(name="CodingDojo", city="New York", state="NY")
+
+2.
+    c = Dojo.objects.get(id=1)
+    c.delete()
+    c = Dojo.objects.get(id=2)
+    c.delete()
+    c = Dojo.objects.get(id=3)
+    c.delete()
+
+3.
+    Dojo.objects.create(name="CodingDojo", city="Burbank", state="CA")
+    Dojo.objects.create(name="CodingDojo", city="Phoenix", state="AZ")
+    Dojo.objects.create(name="CodingDojo", city="Portland", state="OR")
+
+4. 
+    j = Dojo.objects.get(city="Burbank")
+    Ninja.objects.create(first_name="Kobe", last_name="Bryant", dojo=j)
+    Ninja.objects.create(first_name="Linda", last_name="Barrett", dojo=j)
+    Ninja.objects.create(first_name="Deloris", last_name="Barrett", dojo=j)
+
+5. 
+    k = Dojo.objects.get(city="Phoenix")
+    Ninja.objects.create(first_name="Barbara", last_name="Walters", dojo=k)
+    Ninja.objects.create(first_name="Frank", last_name="Sinatra", dojo=k)
+    Ninja.objects.create(first_name="Marshall", last_name="Mathers", dojo=k)
+
+6.
+    l = Dojo.objects.get(city="Portland")
+    Ninja.objects.create(first_name="Craig", last_name="Sager", dojo=l)
+    Ninja.objects.create(first_name="Big", last_name="Bird", dojo=l)
+    Ninja.objects.create(first_name="Tupac", last_name="Shakur", dojo=l)
+
+7. 
+    Ninja.objects.filter(dojo=j).values()
+
+8. 
+    Ninja.objects.filter(dojo=l).values()
